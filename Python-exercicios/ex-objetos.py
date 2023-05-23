@@ -14,6 +14,6 @@ p1 = People(n1,p1)
 p2 = People(n2,p2)
 
 if p1.peso>p2.peso :
-    print('O',p1.nome,'é o mais pesado com',p1.peso,'Kg')
+    print('O',p1.nome,'Ã© o mais pesado com',p1.peso,'Kg')
 else:
-    print('O é o mais pesado e',p2.nome,'é o mais pesado com',p2.peso,'Kg')
+    print('O Ã© o mais pesado e',p2.nome,'Ã© o mais pesado com',p2.peso,'Kg')
