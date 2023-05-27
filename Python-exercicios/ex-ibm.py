@@ -12,3 +12,4 @@ elif ibm >=30 and ibm <35:
     print('{:.{}f} you\'re obese'.format(ibm,2))
 else:
     print('{:.{}f} you\'re clinically obese'.format(ibm,2))
+    
