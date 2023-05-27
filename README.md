@@ -1,5 +1,3 @@
-# Hello, World!
- What is love?
- Oh baby, don't hurt me
- Don't hurt me
- No more
+# I created this repository to keep exercises/task in languages that I'm learning
+ - Python
+ - C
