@@ -1,5 +1,4 @@
 create database redes;
-use redes;
 
 create table alunos(
 id integer,
@@ -38,25 +37,25 @@ SELECT * FROM alunos;
 SELECT nome,salario FROM alunos;
 
 /* c. Selecionar os alunos que moram no centro */
-SELECT * FROM alunos WHERE bairro='Centro';
+SELECT nome FROM alunos WHERE bairro='Centro';
 
 /* d. Selecionar os alunos de 2º Semestre com salário superior a R$2000,00 */
-SELECT * FROM alunos WHERE turma='2ºSemestre' AND salario>2000;
+SELECT nome FROM alunos WHERE turma='2ºSemestre' AND salario>2000;
 
 /* e. Selecionar os alunos das turmas de 2º ou 4º Semestre */
-SELECT * FROM alunos WHERE turma='2ºSemestre' OR turma='4ºSemestre';
+SELECT nome FROM alunos WHERE turma='2ºSemestre' OR turma='4ºSemestre';
 
 /* f. Selecionar os alunos que o nome contenha Pereira */
-SELECT * FROM alunos WHERE nome like'%Pedro%';
+SELECT nome FROM alunos WHERE nome like'%Pedro%';
 
 /* g. Selecionar os alunos que o nome inicie com a Letra A */
-SELECT * FROM alunos WHERE nome like'A%';
+SELECT nome FROM alunos WHERE nome like'A%';
 
 /* h. Selecionar os alunos nascidos em 1990 */
-SELECT * FROM alunos WHERE datanasc like'1990%';
+SELECT nome FROM alunos WHERE datanasc like'1990%';
 
 /* i. Selecionar os alunos nascidos entre 1990 e 1994 */
-SELECT * FROM alunos WHERE year(datanasc) between 1990 and 1994;
+SELECT nome FROM alunos WHERE year(datanasc) between 1990 and 1994;
 
 /* j. Somar o salário dos alunos */
 SELECT sum(salario) FROM alunos;
@@ -74,10 +73,10 @@ SELECT turma,count(turma) FROM alunos GROUP BY turma;
 SELECT bairro,sum(salario),count(bairro) FROM alunos GROUP BY bairro;
 
 /* o. Inserir um novo aluno */
-insert into alunos values (19, 'Osvaldo Cruz', 'Jadrim Atlântico', '3ºSemestre', 2000, '1989/11/09');
+insert into alunos values (21, 'Osvaldo Cruz', 'Vera Cruz', '3ºSemestre', 2500, '1989/16/09');
 
 /* p. Aumentar 10% o salario dos alunos do 2ºSemestre */
-SELECT salario*1.10 FROM alunos WHERE turma='2ºSemestre';
+UPDATE alunos SET salario=salario*1.10 WHERE turma='2ºSemestre';
 
 /* q. Excluir o aluno de matricula 4 */
 DELETE FROM alunos WHERE id=4;
